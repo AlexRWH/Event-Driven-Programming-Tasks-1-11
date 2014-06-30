@@ -1,6 +1,6 @@
 from PyQt4.QtGui import *
 
-import resource
+import resources
 
 class CropView(QGraphicsView):
     """this class provides a graphics view that has the ressources for displaying

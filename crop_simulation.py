@@ -14,7 +14,7 @@ from potato_class import *
 class CropWindow(QMainWindow):
     """this class creates a main window to observe the growth of simulated crop"""
 
-    #Conatructor
+    #Constructor
     def __init__(self):
         super().__init__() #call super class constructor
         self.setWindowTitle("Crop Simulation") #Set Window Title
@@ -59,7 +59,7 @@ class CropWindow(QMainWindow):
 
         if crop_type == 1:
             self.crop_view = WheatView()
-        elif crop_type_view == 2:
+        elif crop_type == 2:
             self.crop_view = PotatoView()
 
         #ensure the crop view appears a certain size
@@ -130,15 +130,15 @@ class CropWindow(QMainWindow):
         self.days_line_edit.setText(str(crop_status_report["days growing"]))
         self.status_line_edit.setText(str(crop_status_report["status"]))
 
-        if crop_status_report["status"] == "seed":
+        if crop_status_report["status"] == "Seed":
             self.crop_view.switch_scene(0)
-        elif crop_status_report["status"] == "seedling":
+        elif crop_status_report["status"] == "Seedling":
             self.crop_view.switch_scene(1)
-        elif crop_status_report["status"] == "young":
+        elif crop_status_report["status"] == "Young":
             self.crop_view.switch_scene(2)
-        elif crop_status_report["status"] == "mature":
+        elif crop_status_report["status"] == "Mature":
             self.crop_view.switch_scene(3)
-        elif crop_status_report["status"] == "old":
+        elif crop_status_report["status"] == "Old":
             self.crop_view.switch_scene(4)
 
 def main():
